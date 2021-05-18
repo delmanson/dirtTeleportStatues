@@ -1,0 +1,10 @@
+#0.0.1#
+
+on load:
+	set {_version} to content of file "plugins/Skript/scripts/%skript%.sk"
+	set {_v} to index of "##" in {_version}
+	set {_v2} to subtext of {_version} from character ({_v}+1) to character (length of {_version})
+	set {_v3} to index of "##" in {_v2} 
+	set {version} to subtext of {_version} from character ({_v}+1) to character ({_v3})
+	wait 1 tick
+	set {_version} to result of connect to "" 
